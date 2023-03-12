@@ -1,3 +1,3 @@
-import TopBar from "./TopBar";
+import MainLayout from "./MainLayout";
 
-export { TopBar }
+export { MainLayout }

@@ -1,0 +1,94 @@
+/* general */
+.top-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+  font-family: var(--ff-headings);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  padding: 0.5em 1.25em;
+  font-weight: 300;
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+
+.container {
+  margin: 0em 10em;
+}
+
+.active-link {
+  /* used important to overwrite color changes for currently selected site */
+  outline: 2px solid var(--primary-clr);
+  background-color: var(--secondary-clr) !important;
+  color: var(--primary-clr) !important;
+  font-weight: 700 !important;
+  transform: scale(1.1);
+}
+
+.btn:hover,
+.btn:focus {
+  outline: 2px solid var(--primary-clr);
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+  transform: scale(1.1);
+}
+
+.top-bar__header,
+.navigation__links {
+  padding: 0.75em 1.5em;
+}
+
+.contact-info__phone-link,
+.links__link {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  font-weight: 300;
+}
+
+/* header */
+.top-bar__header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.logo {
+  grid-column-start: 2;
+  place-self: center;
+  align-items: center;
+}
+
+.contact-info {
+  place-self: end;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info__phone-link {
+  margin-top: 0.25rem;
+}
+
+.contact-info__phone-link:hover,
+.contact-info__phone-link:focus {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* navigation */
+.top-bar__navigation {
+  background-color: var(--secondary-clr);
+  color: white;
+}
+
+.navigation__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5em;
+}
