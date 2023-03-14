@@ -8,6 +8,12 @@
   --ff-regular: "Roboto", sans-serif;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 .btn {
   border: none;
   padding: 0.5em 1.25em;
@@ -21,9 +27,21 @@
   margin: 0em 10em;
 }
 
+@media (max-width: 768px) {
+  .container {
+    margin: 0 5em;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    margin: 0;
+  }
+}
+
 .active-link {
   /* used important to overwrite color changes for currently selected site */
-  outline: 2px solid var(--primary-clr);
+  border: 2px solid var(--primary-clr);
   background-color: var(--secondary-clr) !important;
   color: var(--primary-clr) !important;
   font-weight: 700 !important;
@@ -32,7 +50,7 @@
 
 .btn:hover,
 .btn:focus {
-  outline: 2px solid var(--primary-clr);
+  border: 2px solid var(--primary-clr);
   background-color: var(--secondary-clr);
   color: var(--primary-clr);
   transform: scale(1.1);
