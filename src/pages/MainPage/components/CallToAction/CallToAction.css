@@ -1,0 +1,49 @@
+.section-call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-clr);
+  height: 700px;
+}
+
+.section-call-to-action .container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.label__years {
+  font-size: 13rem;
+}
+
+.label__text {
+  max-width: 60%;
+  font-size: 5rem;
+  text-align: start;
+  line-height: 1.25;
+}
+
+.call-to-action__label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5em;
+}
+
+.call-to-action-link {
+  font-size: 1.5rem;
+  font-family: var(--ff-headings);
+}
+
+@media (max-width: 1140px) {
+  .call-to-action__label {
+    flex-direction: column;
+  }
+
+  .label__text {
+    max-width: 100%;
+    font-size: 3rem;
+  }
+}

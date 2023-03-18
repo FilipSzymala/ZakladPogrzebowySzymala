@@ -1,4 +1,4 @@
 import MainPage from "./MainPage"
-import NotFound from "./NotFound";
-export { MainPage, NotFound };
+import NotFound from "./NotFound"
+export { MainPage, NotFound }
 

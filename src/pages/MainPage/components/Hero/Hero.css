@@ -1,0 +1,44 @@
+.section-hero {
+  position: relative;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-image: url("../../../../assets/zaklad.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px) brightness(40%);
+}
+
+.hero-text {
+  color: var(--secondary-clr);
+  font-family: var(--ff-headings);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.hero-seperator {
+  width: 50%;
+  margin: 1em auto;
+}
+
+.hero-author {
+  font-size: 1.5rem;
+}
