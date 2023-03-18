@@ -48,20 +48,32 @@ const TopBar = () => {
             >
               strona główna
             </Link>
-            <Link to="/o_nas" rel="noreferrer" className="links__link btn">
+            <Link
+              to="/o_nas"
+              rel="noreferrer"
+              className="links__link btn btn--primary"
+            >
               o nas
             </Link>
-            <Link to="/oferta" rel="noreferrer" className="links__link btn">
+            <Link
+              to="/oferta"
+              rel="noreferrer"
+              className="links__link btn btn--primary"
+            >
               oferta
             </Link>
             <Link
               to="/akutalnosci"
               rel="noreferrer"
-              className="links__link btn"
+              className="links__link btn btn--primary"
             >
               aktualności
             </Link>
-            <Link to="/kontakt" rel="noreferrer" className="links__link btn">
+            <Link
+              to="/kontakt"
+              rel="noreferrer"
+              className="links__link btn btn--primary"
+            >
               kontakt
             </Link>
           </div>

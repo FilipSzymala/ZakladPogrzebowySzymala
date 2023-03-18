@@ -15,11 +15,28 @@
 }
 
 .btn {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-weight: 300;
   border: none;
   padding: 0.5em 1.25em;
   font-weight: 300;
+}
+
+.btn--accent {
+  background-color: var(--accent-clr);
+  color: var(--secondary-clr);
+}
+
+.btn--primary {
   background-color: var(--primary-clr);
   color: var(--secondary-clr);
+}
+
+.btn--secondary {
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
 }
 
 /* site constant margin  */
@@ -35,7 +52,7 @@
 
 @media (max-width: 580px) {
   .container {
-    margin: 0;
+    margin: 0 1em;
   }
 }
 
@@ -48,10 +65,20 @@
   transform: scale(1.1);
 }
 
-.btn:hover,
-.btn:focus {
+.btn--primary:hover,
+.btn--primary:focus {
   border: 2px solid var(--primary-clr);
   background-color: var(--secondary-clr);
   color: var(--primary-clr);
+  transform: scale(1.1);
+}
+
+.btn--accent:hover,
+.btn--accent:focus {
+  transform: scale(1.1);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
   transform: scale(1.1);
 }

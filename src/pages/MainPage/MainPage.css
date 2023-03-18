@@ -1,5 +1,100 @@
-main {
-  margin-top: 150px;
-  display: grid;
-  place-items: center;
+.section-hero {
+  position: relative;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background-image: url("../../assets/zaklad.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(8px) brightness(40%);
+}
+
+.hero-text {
+  color: var(--secondary-clr);
+  font-family: var(--ff-headings);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+.hero-seperator {
+  width: 50%;
+  margin: 1em auto;
+}
+
+.hero-author {
+  font-size: 1.5rem;
+}
+
+/* section call-to-action */
+
+.section-call-to-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-clr);
+  height: 700px;
+}
+
+.section-call-to-action .container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.label__years {
+  font-size: 13rem;
+}
+
+.label__text {
+  max-width: 60%;
+  font-size: 5rem;
+  text-align: start;
+  line-height: 1.25;
+}
+
+.call-to-action__label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5em;
+}
+
+.call-to-action-link {
+  font-size: 1.5rem;
+  font-family: var(--ff-headings);
+}
+
+@media (max-width: 1140px) {
+  main {
+    margin-top: 102px;
+  }
+
+  .call-to-action__label {
+    flex-direction: column;
+  }
+
+  .label__text {
+    max-width: 100%;
+    font-size: 3rem;
+  }
 }
