@@ -1,4 +1,3 @@
-import "./App.css";
 import { MainLayout } from "./components";
 import { MainPage, NotFound } from "./pages";
 import { Routes, Route } from "react-router-dom";
