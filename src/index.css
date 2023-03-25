@@ -44,6 +44,16 @@
   margin: 0em 10em;
 }
 
+.section-primary {
+  background-color: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+
+.section-secondary {
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 0 5em;

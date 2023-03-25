@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/ZSP-logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faAt, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faWhatsapp,

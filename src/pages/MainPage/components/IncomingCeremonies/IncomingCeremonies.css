@@ -1,0 +1,65 @@
+.section-incoming-ceremonies .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2em;
+  font-family: var(--ff-headings);
+}
+
+.ceremonies-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 3em 0em;
+  overflow: hidden;
+}
+
+.ceremony-item {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--secondary-clr);
+  color: var(--primary-clr);
+  padding: 1.5em;
+}
+
+.dead-info h2 {
+  margin: 0;
+}
+
+.dead-info,
+.ceremony-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+  color: var(--accent-clr);
+}
+
+.dead-photo {
+  margin-bottom: 1em;
+}
+
+.ceremonies-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-arrow {
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.control-arrow:hover,
+.control-arrow:focus {
+  cursor: pointer;
+  transform: scale(1.2);
+}
