@@ -1,23 +1,38 @@
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/ZSP-logo.svg";
 import "./TopBar.css";
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import { useRef } from "react";
 
 const TopBar = () => {
   const topBarRef = useRef(null);
+  const topBarNavRef = useRef(null);
+  const topBarHeaderWrapperRef = useRef(null);
   const [hamburger, setHamburger] = useState(false);
   const openHamburger = () => {
     setHamburger(!hamburger);
     if (hamburger) {
-      topBarRef.current.style.height = "102px";
+      setTimeout(() => {
+        topBarRef.current.style.height = "102px";
+      }, 1000);
     } else {
       topBarRef.current.style.height = "unset";
     }
   };
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 0) {
+      topBarNavRef.current.style.transform = "translateY(-200px)";
+      topBarHeaderWrapperRef.current.style.height = "90px";
+    } else {
+      topBarNavRef.current.style.transform = "translateY(102px)";
+      topBarHeaderWrapperRef.current.style.height = "unset";
+    }
+  });
+
   return (
     <div className="top-bar" ref={topBarRef}>
-      <header className="top-bar__header-wrapper">
+      <header className="top-bar__header-wrapper" ref={topBarHeaderWrapperRef}>
         <div
           className={hamburger ? "hamburger open" : "hamburger"}
           onClick={() => openHamburger()}
@@ -44,6 +59,7 @@ const TopBar = () => {
         className={
           hamburger ? "top-bar__navigation open" : "top-bar__navigation"
         }
+        ref={topBarNavRef}
       >
         <div className="navigation__links container">
           <Link to="/" rel="noreferrer" className="links__link btn active-link">
