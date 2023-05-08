@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 import logo from "../../../../assets/ZSP-logo.svg";
 import "./TopBar.css";
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
+import { useRef } from "react";
 
 const TopBar = () => {
+  const topBarRef = useRef(null);
   const [hamburger, setHamburger] = useState(false);
   const openHamburger = () => {
     setHamburger(!hamburger);
+    if (hamburger) {
+      topBarRef.current.style.height = "102px";
+    } else {
+      topBarRef.current.style.height = "unset";
+    }
   };
   return (
-    <div className="top-bar">
+    <div className="top-bar" ref={topBarRef}>
       <header className="top-bar__header-wrapper">
         <div
           className={hamburger ? "hamburger open" : "hamburger"}

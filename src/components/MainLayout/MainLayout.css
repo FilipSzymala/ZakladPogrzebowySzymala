@@ -114,6 +114,7 @@
 @media (max-width: 1140px) {
   .hamburger {
     display: flex;
+    top: 33px;
   }
 
   .top-bar {
