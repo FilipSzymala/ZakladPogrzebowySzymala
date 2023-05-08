@@ -11,21 +11,46 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 50px;
   padding: 3em 0em;
   overflow: hidden;
 }
 
 .ceremony-item {
-  width: 275px;
+  min-width: calc(25% - 50px);
+  max-width: calc(25% - 50px);
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   background-color: var(--secondary-clr);
   color: var(--primary-clr);
   padding: 1.5em;
+}
+
+.ceremony-item:first-of-type {
+  margin-left: 0;
+  transition: margin 0.3s ease-in-out;
+}
+
+@media (max-width: 1550px) {
+  .ceremony-item {
+    min-width: calc(34% - 50px);
+    max-width: calc(34% - 50px);
+  }
+}
+
+@media (max-width: 1234px) {
+  .ceremony-item {
+    min-width: calc(50% - 50px);
+    max-width: calc(50% - 50px);
+  }
+}
+
+@media (max-width: 950px) {
+  .ceremony-item {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 .dead-info h2 {
